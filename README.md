@@ -1,6 +1,6 @@
 # Ceru Music NAS Sync
 
-Ceru Music NAS Sync 是 maiga512 维护的澜音/Ceru Music 自部署多端同步方案，包含两个部分：
+Ceru Music NAS Sync 是的澜音/Ceru Music 自部署多端同步方案，包含两个部分：
 
 - `server/`：部署在 NAS、服务器、软路由、Docker 面板上的同步服务端。
 - `plugins/ceru-nas-sync-service.js`：导入到澜音/Ceru Music 桌面端的服务插件。
