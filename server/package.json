@@ -1,0 +1,27 @@
+{
+  "name": "@maiga512/ceru-nas-sync-server",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Self-hosted NAS playlist sync server for Ceru Music",
+  "author": "maiga512",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.16.5",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}
