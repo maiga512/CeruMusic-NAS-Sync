@@ -46,4 +46,10 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          labels: |
+            ${{ steps.meta.outputs.labels }}
+            org.opencontainers.image.title=Ceru Music NAS Sync
+            org.opencontainers.image.description=Self-hosted NAS sync server for Ceru Music playlists and favorites, with x86_64 and ARM64 Docker images.
+            org.opencontainers.image.url=https://github.com/maiga512/CeruMusic-NAS-Sync
+            org.opencontainers.image.source=https://github.com/maiga512/CeruMusic-NAS-Sync
+            org.opencontainers.image.vendor=maiga512

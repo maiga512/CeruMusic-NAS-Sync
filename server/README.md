@@ -2,6 +2,20 @@
 
 Ceru Music 的自部署歌单同步服务。它用 SQLite 保存用户、歌单、歌曲和收藏关系，桌面端通过 NAS 同步插件连接它。
 
+项目地址：
+
+```text
+https://github.com/maiga512/CeruMusic-NAS-Sync
+```
+
+Docker 镜像：
+
+```text
+ghcr.io/maiga512/ceru-music-nas-sync:latest
+```
+
+镜像支持 `linux/amd64` 和 `linux/arm64`，常见 x86_64 NAS、服务器、软路由和 ARM64 设备都可以部署。
+
 ## 目录
 
 ```text
@@ -39,6 +53,18 @@ cp .env.example .env
 编辑 `.env`，把 `CERU_SYNC_ADMIN_TOKEN` 改成你自己的值。
 
 启动：
+
+```bash
+docker compose up -d
+```
+
+默认会拉取已发布镜像：
+
+```text
+ghcr.io/maiga512/ceru-music-nas-sync:latest
+```
+
+如需在本机重新构建镜像，可以执行：
 
 ```bash
 docker compose up -d --build

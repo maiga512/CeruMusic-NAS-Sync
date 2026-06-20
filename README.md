@@ -7,6 +7,20 @@ Ceru Music NAS Sync 是的澜音/Ceru Music 自部署多端同步方案，包含
 
 它用于把桌面端的歌单、歌单歌曲、收藏关系备份到你自己的 NAS，并支持多台设备通过同一个 NAS 服务进行多端同步。
 
+项目地址：
+
+```text
+https://github.com/maiga512/CeruMusic-NAS-Sync
+```
+
+Docker 镜像：
+
+```text
+ghcr.io/maiga512/ceru-music-nas-sync:latest
+```
+
+镜像支持 `linux/amd64` 和 `linux/arm64`，也就是常见 x86_64 服务器/NAS 和 ARM64 设备都可以使用。
+
 ## 功能
 
 - 自部署 NAS 同步服务，不使用公共云地址。
@@ -14,7 +28,7 @@ Ceru Music NAS Sync 是的澜音/Ceru Music 自部署多端同步方案，包含
 - 多用户隔离：用户 1、用户 2、用户 3 使用同一个服务器地址，但各自使用自己的绑定码，数据独立保存。
 - 桌面端插件登录后会首轮上传本机歌单，后续本机变更会自动备份。
 - 服务端按 revision 返回变更事件，桌面端低频轮询，不会反复拉完整歌单。
-- 支持 Docker 部署和反向代理。
+- 支持 Docker 部署和反向代理，Docker 镜像同时支持 x86_64 和 ARM64 架构。
 
 ## 隐私说明
 
@@ -73,6 +87,13 @@ docker compose up -d
 
 ```text
 ghcr.io/maiga512/ceru-music-nas-sync:latest
+```
+
+这个镜像已经发布在 GitHub Container Registry，支持：
+
+```text
+linux/amd64  # x86_64 NAS、服务器、软路由
+linux/arm64  # ARM64 NAS、服务器、开发板
 ```
 
 如果你想本地构建：
